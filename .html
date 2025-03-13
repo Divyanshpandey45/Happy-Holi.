@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi Wishes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff4081, #ffeb3b, #4caf50, #03a9f4);
+            background-size: 400% 400%;
+            animation: gradientBG 10s infinite alternate;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        .message {
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        .button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff5722;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #e64a19;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Happy Holi! 🌈</h1>
+        <p class="message" id="holiMessage">Wishing you a Holi filled with vibrant colors of joy, love, and happiness!</p>
+        <button class="button" onclick="changeMessage()">Click for a Surprise 🎉</button>
+        <p class="footer">Happy Holi wishes from Divyansh Pandey</p>
+    </div>
+
+    <script>
+        function changeMessage() {
+            const messages = [
+                "May your life be as colorful as Holi!",
+                "Splash yourself with happiness and love!",
+                "Celebrate this festival with joy and laughter!",
+                "Let the colors of Holi brighten your life!",
+                "Wishing you endless moments of happiness!"
+            ];
+            document.getElementById("holiMessage").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
